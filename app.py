@@ -211,7 +211,17 @@ def main():
             color: #1D4ED8;
         }
 
-        /* 4. Button Styling & Hover Effects (Ultra Interactive) */
+        /* 4. Tab Content Area Wrapper (Inner Card) */
+        div[data-testid="stTabs"] > div:nth-child(2) {
+            background-color: #FFFFFF;
+            padding: 30px;
+            border-radius: 16px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.03);
+            border: 1px solid #EEF2F6;
+            margin-top: 15px;
+        }
+
+        /* 5. Button Styling & Hover Effects (Ultra Interactive) */
         .stButton>button {
             border-radius: 12px;
             height: 3.2rem;
