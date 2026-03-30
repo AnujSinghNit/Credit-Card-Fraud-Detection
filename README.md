@@ -2,7 +2,7 @@
 
 A full-stack, end-to-end Machine Learning web application built with **Python** and **Streamlit**. This project automatically trains and evaluates multiple classification algorithms on a highly imbalanced, real-world credit card dataset, selects the best performing model based on statistical **Recall**, and serves it through an interactive, robust dashboard.
 
-## 🌟 Key Features
+##  Key Features
 
 * **Authentic Data Integration**: Automatically securely downloads and segments a ~150MB 284,807-record credit card dataset strictly into training and unseen testing sets.
 * **Intelligent Preprocessing**: 
@@ -19,7 +19,7 @@ A full-stack, end-to-end Machine Learning web application built with **Python** 
 
 ---
 
-## 🚀 Setup & Installation (Local Execution)
+##  Setup & Installation (Local Execution)
 
 1. **Clone the Repository** and open the folder.
    ```bash
@@ -49,7 +49,7 @@ A full-stack, end-to-end Machine Learning web application built with **Python** 
    ```
    A new browser tab will immediately open visualizing your fully functioning Web UI!
 
----
+
 
 ## ☁️ Deployment Guide (Streamlit Cloud)
 
@@ -68,9 +68,9 @@ Because Streamlit Cloud spins up fresh virtual machines for free, make sure `mod
 
 You will now have a public, live URL running your machine-learning algorithm accessible anywhere in the world.
 
----
 
-## 📁 File Structure
+
+##  File Structure
 
 * `app.py` - The core Streamlit application interface code. It directly reads the saved `Pickle` model for instant loading times.
 * `train_model.py` - The powerhouse script utilizing Pandas, Scikit-Learn, and SMOTE to crunch all datasets and save the victor models offline.
