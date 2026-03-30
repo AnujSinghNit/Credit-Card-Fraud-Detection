@@ -163,6 +163,23 @@ def render_prediction_system(model, scaler, features):
 def main():
     st.markdown("""
         <style>
+        @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+        /* 0. Global Typography Upgrade */
+        html, body, p, div, span, label, h1, h2, h3, h4, li {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+        }
+        p, label {
+            color: #475569 !important;
+            line-height: 1.6 !important;
+            letter-spacing: 0.2px;
+        }
+        h1, h2, h3, h4 {
+            color: #0F172A !important;
+            font-weight: 800 !important;
+            letter-spacing: -0.5px !important;
+        }
+        
         /* 1. App Background Color (Interactive Animated Gradient) */
         .stApp {
             background: linear-gradient(-45deg, #E3F2FD, #FFFFFF, #BBDEFB, #F4F6F9);
