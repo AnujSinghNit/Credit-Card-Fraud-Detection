@@ -253,31 +253,6 @@ def main():
             100% { background-position: 0% 50%; }
         }
         
-        /* 6. Radio Button Segmented Controls (Highly Tactile) */
-        div[role="radiogroup"] {
-            display: flex;
-            gap: 15px;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-        div[role="radiogroup"] > label {
-            background-color: #FFFFFF;
-            padding: 16px 24px;
-            border-radius: 12px;
-            border: 2px solid #E2E8F0;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-            cursor: pointer;
-            flex: 1;
-            display: flex;
-            justify-content: center;
-        }
-        div[role="radiogroup"] > label:hover {
-            border-color: #38BDF8;
-            background-color: #F8FAFC;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 16px rgba(56, 189, 248, 0.15);
-        }
         </style>
         <div class="custom-header">
             <h1 style="color: white; margin: 0; font-size: 38px; font-weight: 800;">💳 Credit Card Fraud Detection</h1>
