@@ -163,9 +163,9 @@ def render_prediction_system(model, scaler, features):
 def main():
     st.markdown("""
         <style>
-        /* 1. App Background Color */
+        /* 1. App Background Color (Interactive Gradient) */
         .stApp {
-            background-color: #F0F4F8;
+            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
         }
 
         /* 2. Navigation Bar (Tabs) Styling */
