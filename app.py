@@ -211,47 +211,72 @@ def main():
             color: #1D4ED8;
         }
 
-        /* 4. Button Styling & Hover Effects */
+        /* 4. Button Styling & Hover Effects (Ultra Interactive) */
         .stButton>button {
             border-radius: 12px;
-            height: 3rem;
+            height: 3.2rem;
             font-size: 16px;
-            font-weight: 600;
-            transition: all 0.3s ease;
+            font-weight: 700;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            background-color: white;
-            border: 1px solid #DEE2E6;
+            background-color: #FFFFFF;
+            border: 2px solid #E2E8F0;
+            color: #1E293B;
         }
         .stButton>button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(37, 99, 235, 0.2);
             border-color: #2563EB;
             color: #2563EB;
         }
+        .stButton>button:active {
+            transform: translateY(0px);
+            box-shadow: 0 4px 6px rgba(37, 99, 235, 0.1);
+        }
 
-        /* 5. The Header Gradient */
+        /* 5. The Header Gradient (Animated) */
         .custom-header {
-            background: linear-gradient(90deg, #2563EB 0%, #38BDF8 100%);
+            background: linear-gradient(270deg, #2563EB, #38BDF8, #818CF8, #2563EB);
+            background-size: 300% 300%;
+            animation: headerFlow 8s ease infinite;
             padding: 30px;
             border-radius: 16px;
             color: white;
             text-align: center;
             margin-bottom: 30px;
-            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        @keyframes headerFlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         
-        /* 6. Radio Button Cards */
+        /* 6. Radio Button Segmented Controls (Highly Tactile) */
+        div[role="radiogroup"] {
+            display: flex;
+            gap: 15px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
         div[role="radiogroup"] > label {
-            background-color: #F8F9FA;
-            padding: 10px 20px;
-            border-radius: 8px;
-            border: 1px solid #E9ECEF;
-            transition: all 0.2s;
+            background-color: #FFFFFF;
+            padding: 16px 24px;
+            border-radius: 12px;
+            border: 2px solid #E2E8F0;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+            cursor: pointer;
+            flex: 1;
+            display: flex;
+            justify-content: center;
         }
         div[role="radiogroup"] > label:hover {
-            border-color: #2563EB;
-            cursor: pointer;
-            background-color: #EFF6FF;
+            border-color: #38BDF8;
+            background-color: #F8FAFC;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(56, 189, 248, 0.15);
         }
         </style>
         <div class="custom-header">
