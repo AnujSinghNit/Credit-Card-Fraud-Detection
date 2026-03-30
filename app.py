@@ -70,13 +70,13 @@ def render_confusion_matrices(results):
             st.pyplot(fig)
 
 def render_prediction_system(model, scaler, features):
-    st.markdown("<h2>🛡️ Live Fraud Analysis Engine</h2>", unsafe_allow_html=True)
+    st.markdown("<h2>🛡️ <span class='gradient-text'>Live Fraud Analysis Engine</span></h2>", unsafe_allow_html=True)
     st.info("💡 **Welcome to the Processing System.** Choose your scanning method below to instantly verify transaction authenticity using our highly-trained AI security model.", icon="💡")
 
     pred_mode = st.radio("Select Processing Mode", ["⚡ Real-Time Single Scan", "📁 Batch CSV Processing"], horizontal=True)
     
     if pred_mode == "⚡ Real-Time Single Scan":
-        st.markdown("#### 🧪 Live Transaction Sandbox")
+        st.markdown("<h4>🧪 <span class='gradient-text'>Live Transaction Sandbox</span></h4>", unsafe_allow_html=True)
         st.write("Click a button below to automatically extract a random transaction from the secure dataset and scan it in real-time. No manual data entry required!")
         
         col1, col2 = st.columns(2)
@@ -179,6 +179,22 @@ def main():
             color: #0F172A !important;
             font-weight: 800 !important;
             letter-spacing: -0.5px !important;
+        }
+
+        /* 0.5 Advanced Gradient Typography */
+        .gradient-text {
+            background: linear-gradient(-45deg, #2563EB, #8B5CF6, #38BDF8, #2563EB);
+            background-size: 300% 300%;
+            animation: textGradient 6s ease infinite;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900 !important;
+            letter-spacing: -1px;
+        }
+        @keyframes textGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
         
         /* 1. App Background Color (Interactive Animated Gradient) */
