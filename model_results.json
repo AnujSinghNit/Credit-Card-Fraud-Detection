@@ -1,0 +1,82 @@
+{
+    "Logistic Regression": {
+        "Accuracy": 0.9731,
+        "Precision": 0.0558,
+        "Recall": 0.9184,
+        "F1-score": 0.1053,
+        "Confusion_Matrix": [
+            [
+                55342,
+                1522
+            ],
+            [
+                8,
+                90
+            ]
+        ]
+    },
+    "Decision Tree": {
+        "Accuracy": 0.9974,
+        "Precision": 0.3713,
+        "Recall": 0.7653,
+        "F1-score": 0.5,
+        "Confusion_Matrix": [
+            [
+                56737,
+                127
+            ],
+            [
+                23,
+                75
+            ]
+        ]
+    },
+    "Random Forest": {
+        "Accuracy": 0.9995,
+        "Precision": 0.8696,
+        "Recall": 0.8163,
+        "F1-score": 0.8421,
+        "Confusion_Matrix": [
+            [
+                56852,
+                12
+            ],
+            [
+                18,
+                80
+            ]
+        ]
+    },
+    "Best_Model": "Logistic Regression",
+    "Features": [
+        "V1",
+        "V2",
+        "V3",
+        "V4",
+        "V5",
+        "V6",
+        "V7",
+        "V8",
+        "V9",
+        "V10",
+        "V11",
+        "V12",
+        "V13",
+        "V14",
+        "V15",
+        "V16",
+        "V17",
+        "V18",
+        "V19",
+        "V20",
+        "V21",
+        "V22",
+        "V23",
+        "V24",
+        "V25",
+        "V26",
+        "V27",
+        "V28",
+        "Amount"
+    ]
+}
