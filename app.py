@@ -161,7 +161,27 @@ def render_prediction_system(model, scaler, features):
 
 
 def main():
-    st.title("💳 Credit Card Fraud Detection System")
+    st.markdown("""
+        <style>
+        .stButton>button {
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .custom-header {
+            background: linear-gradient(90deg, #2563EB 0%, #38BDF8 100%);
+            padding: 24px;
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        </style>
+        <div class="custom-header">
+            <h1 style="color: white; margin: 0;">💳 Credit Card Fraud Detection System</h1>
+            <p style="margin: 0; font-size: 18px; opacity: 0.9;">Enterprise-Grade Machine Learning Predictor</p>
+        </div>
+    """, unsafe_allow_html=True)
     
     # Try loading resources
     model, scaler, results = load_resources()
