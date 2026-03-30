@@ -163,19 +163,28 @@ def render_prediction_system(model, scaler, features):
 def main():
     st.markdown("""
         <style>
-        /* 1. App Background Color (Interactive Gradient) */
+        /* 1. App Background Color (Interactive Animated Gradient) */
         .stApp {
-            background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+            background: linear-gradient(-45deg, #E3F2FD, #FFFFFF, #BBDEFB, #F4F6F9);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
-        /* 2. Main Content Card Wrapper */
+        /* 2. Main Content Card Wrapper (Glassmorphism) */
         .block-container {
-            background-color: #FFFFFF;
-            padding: 2rem !important;
-            border-radius: 16px;
-            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(16px);
+            padding: 2.5rem !important;
+            border-radius: 24px;
+            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
             margin-top: 2rem;
             margin-bottom: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.6);
         }
 
         /* 3. Navigation Bar (Tabs) -> Converted into Distinct Pills */
