@@ -70,13 +70,14 @@ def render_confusion_matrices(results):
             st.pyplot(fig)
 
 def render_prediction_system(model, scaler, features):
-    st.header("🛡️ Fraud Detection Input Form")
-    st.write("Enter transaction details below to check for potential credit card fraud, or upload a CSV containing multiple transactions.")
+    st.markdown("<h2>🛡️ Live Fraud Analysis Engine</h2>", unsafe_allow_html=True)
+    st.info("💡 **Welcome to the Processing System.** Choose your scanning method below to instantly verify transaction authenticity using our highly-trained AI security model.", icon="💡")
 
-    pred_mode = st.radio("Prediction Mode", ["Single Transaction", "Bulk Upload (CSV)"], horizontal=True)
+    pred_mode = st.radio("Select Processing Mode", ["⚡ Real-Time Single Scan", "📁 Batch CSV Processing"], horizontal=True)
     
-    if pred_mode == "Single Transaction":
-        st.write("Click a button below to pull a random transaction from the secure dataset and scan it in real-time. No manual data entry required!")
+    if pred_mode == "⚡ Real-Time Single Scan":
+        st.markdown("#### 🧪 Live Transaction Sandbox")
+        st.write("Click a button below to automatically extract a random transaction from the secure dataset and scan it in real-time. No manual data entry required!")
         
         col1, col2 = st.columns(2)
         with col1:
