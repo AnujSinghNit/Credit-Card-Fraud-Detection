@@ -163,22 +163,60 @@ def render_prediction_system(model, scaler, features):
 def main():
     st.markdown("""
         <style>
-        .stButton>button {
-            border-radius: 8px;
-            font-weight: 600;
+        /* 1. App Background Color */
+        .stApp {
+            background-color: #F0F4F8;
         }
+
+        /* 2. Navigation Bar (Tabs) Styling */
+        div[data-baseweb="tab-list"] {
+            background-color: #FFFFFF;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            gap: 10px;
+        }
+        div[data-baseweb="tab"] {
+            background-color: #F8F9FA;
+            border-radius: 8px;
+            padding: 8px 16px;
+            font-weight: 600;
+            border: 1px solid #DEE2E6;
+        }
+        div[data-baseweb="tab"][aria-selected="true"] {
+            background-color: #2563EB !important;
+            color: white !important;
+        }
+
+        /* 3. Button Styling & Hover Effects */
+        .stButton>button {
+            border-radius: 10px;
+            height: 3rem;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .stButton>button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            border-color: #2563EB;
+            color: #2563EB;
+        }
+
+        /* 4. The Header Gradient */
         .custom-header {
             background: linear-gradient(90deg, #2563EB 0%, #38BDF8 100%);
             padding: 24px;
-            border-radius: 12px;
+            border-radius: 16px;
             color: white;
             text-align: center;
-            margin-bottom: 24px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
         }
         </style>
         <div class="custom-header">
-            <h1 style="color: white; margin: 0;">💳 Credit Card Fraud Detection System</h1>
+            <h1 style="color: white; margin: 0; font-size: 36px; font-weight: 800;">💳 Credit Card Fraud Detection System</h1>
             <p style="margin: 0; font-size: 18px; opacity: 0.9;">Enterprise-Grade Machine Learning Predictor</p>
         </div>
     """, unsafe_allow_html=True)
