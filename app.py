@@ -168,56 +168,86 @@ def main():
             background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
         }
 
-        /* 2. Navigation Bar (Tabs) Styling */
-        div[data-baseweb="tab-list"] {
+        /* 2. Main Content Card Wrapper */
+        .block-container {
             background-color: #FFFFFF;
-            padding: 10px;
-            border-radius: 12px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            gap: 10px;
-        }
-        div[data-baseweb="tab"] {
-            background-color: #F8F9FA;
-            border-radius: 8px;
-            padding: 8px 16px;
-            font-weight: 600;
-            border: 1px solid #DEE2E6;
-        }
-        div[data-baseweb="tab"][aria-selected="true"] {
-            background-color: #2563EB !important;
-            color: white !important;
+            padding: 2rem !important;
+            border-radius: 16px;
+            box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.08);
+            margin-top: 2rem;
+            margin-bottom: 2rem;
         }
 
-        /* 3. Button Styling & Hover Effects */
+        /* 3. Navigation Bar (Tabs) -> Converted into Distinct Pills */
+        button[data-baseweb="tab"] {
+            background-color: transparent !important;
+            border: none !important;
+        }
+        button[data-baseweb="tab"] > div[data-testid="stMarkdownContainer"] > p {
+            background-color: #F1F5F9;
+            padding: 10px 20px;
+            border-radius: 50px;
+            color: #475569;
+            font-weight: 700;
+            margin: 0;
+            transition: all 0.2s ease;
+        }
+        button[data-baseweb="tab"][aria-selected="true"] > div[data-testid="stMarkdownContainer"] > p {
+            background-color: #2563EB;
+            color: white;
+            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.3);
+        }
+        button[data-baseweb="tab"]:hover > div[data-testid="stMarkdownContainer"] > p {
+            background-color: #DBEAFE;
+            color: #1D4ED8;
+        }
+
+        /* 4. Button Styling & Hover Effects */
         .stButton>button {
-            border-radius: 10px;
+            border-radius: 12px;
             height: 3rem;
             font-size: 16px;
             font-weight: 600;
             transition: all 0.3s ease;
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            background-color: white;
+            border: 1px solid #DEE2E6;
         }
         .stButton>button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
             border-color: #2563EB;
             color: #2563EB;
         }
 
-        /* 4. The Header Gradient */
+        /* 5. The Header Gradient */
         .custom-header {
             background: linear-gradient(90deg, #2563EB 0%, #38BDF8 100%);
-            padding: 24px;
+            padding: 30px;
             border-radius: 16px;
             color: white;
             text-align: center;
             margin-bottom: 30px;
-            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.2);
+            box-shadow: 0 6px 12px rgba(37, 99, 235, 0.25);
+        }
+        
+        /* 6. Radio Button Cards */
+        div[role="radiogroup"] > label {
+            background-color: #F8F9FA;
+            padding: 10px 20px;
+            border-radius: 8px;
+            border: 1px solid #E9ECEF;
+            transition: all 0.2s;
+        }
+        div[role="radiogroup"] > label:hover {
+            border-color: #2563EB;
+            cursor: pointer;
+            background-color: #EFF6FF;
         }
         </style>
         <div class="custom-header">
-            <h1 style="color: white; margin: 0; font-size: 36px; font-weight: 800;">💳 Credit Card Fraud Detection System</h1>
-            <p style="margin: 0; font-size: 18px; opacity: 0.9;">Enterprise-Grade Machine Learning Predictor</p>
+            <h1 style="color: white; margin: 0; font-size: 38px; font-weight: 800;">💳 Credit Card Fraud Detection</h1>
+            <p style="margin: 0; font-size: 18px; opacity: 0.95; padding-top: 5px;">Enterprise-Grade Machine Learning Predictor</p>
         </div>
     """, unsafe_allow_html=True)
     
